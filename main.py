@@ -298,7 +298,9 @@ class ExportOperator(bpy.types.Operator):
 
     def execute(self, context):
 
-        file_pointer = open("output.bitxt", "w")
+        path =bpy.path.abspath("//") + "output.bitxt"
+
+        file_pointer = open(path, "w")
 
         file_pointer.write(':header\n')
         file_pointer.write('version 1.0\n')
